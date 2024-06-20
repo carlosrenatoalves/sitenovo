@@ -159,7 +159,7 @@ function pesquisar() {
 
             
 
-            if (dadosRecebidos[i].nome == valor  || dadosRecebidos[i].email == valor ) {
+            if (dadosRecebidos[i].nome.indexOf(valor)!=-1  || dadosRecebidos[i].email.indexOf(valor)!=-1   ) {
 
                 temp.push({ id: dadosRecebidos[i].id, nome: dadosRecebidos[i].nome, email: dadosRecebidos[i].email, data: dadosRecebidos[i].data });
 
