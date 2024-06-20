@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergX</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header id="cabecalho">
+        <div id="logo">
+
+            <figure>
+                <a href="index.html"><img src="raio.png" alt="" width="300" height="60" id="imagemlogo"></a>
+            </figure>
+        </div>
+
+        <nav id="menu">
+
+            <ul>
+                <li class="item"><a href="index.html">Home</a> </li>
+                <li class="item"> <a href="login.html">Login</a></li>
+                <li class="item"><a href="cadastro.html">Cadastro</a></li>
+                <li class="item"><a href="quemsomos.html">Quem somos?</a></li>
+                <li class="item"><a href="admin.html"> Admin </a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="secao" id="secaologin2">
+
+        <form class="secaologin2">
+            <label for="luser2">Nome:</label><br>
+            <input type="text" id="luser2" class="lnome"><br>
+
+            <label for="lemail2">Email:</label><br>
+            <input type="text" id="lemail2" class="lnome"><br>
+
+            <br>
+            <input type="button" name="Entrar" id="cadastrar" value="Cadastrar">
+            <input type="button" name="Limpar" id="limpar" value="Limpar tudo" onclick="limparformulario()">
+        </form>
+
+    </section>
+
+    <section class="secao">
+
+        <div class="campopesquisarlimpar">
+            <div>
+                <input type="text" id="campopesquisar">
+                <input type="button" name="pesquisar" id="pesquisar" value ="pesquisar" onclick="pesquisar()">
+                <input type="button" name="limparcampo" id="limparcampo" value ="limpar campo" onclick="limpacampo()">
+            </div> 
+
+            <div>
+                <input type="button" name="limpartudo" id="limpartudo" value="Limpar tudo" onclick="limparTudo()">
+            </div>
+
+        </div>
+
+        <div id="nomeatributos">
+            <span class="itemlista"> Nome:</span>
+            <span class="itemlista"> Email:</span>
+            <span class="itemlista"> Data:</span>
+        </div>
+
+        <ul id="listadd">
+
+        </ul>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Desenvolvido por :<a href="https://www.instagram.com/decarlosrenatoalves/"><img src="instagram.png"
+                    alt="instagram"></a> Carlos Renato Alves de OLiveira e <a
+                href="https://www.instagram.com/abhima.v?igsh=MTMyYXNldWozM2dieQ=="><img src="instagram.png"
+                    alt=" instagram"></a> Abhimael Sidney Setni Rogatti
+        </p>
+
+    </footer>
+</body>
+
+</html>
