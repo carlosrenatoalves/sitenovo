@@ -153,7 +153,7 @@ function pesquisar() {
         let dadosRecebidos = JSON.parse(localStorage.getItem('dados'));
         let temp = [];
         let valor = document.getElementById("campopesquisar").value;
-
+       if(valor.trim() != ""){
         for (i = 0; i < dadosRecebidos.length; i++) {
 
             if (dadosRecebidos[i].nome == valor || dadosRecebidos[i].email == valor ) {
@@ -168,12 +168,18 @@ function pesquisar() {
             for (i = 0; i < temp.length; i++) {
                 geralista(temp[i]);
             }
+        }else{
+            atualizaLista();
         }
 
     }
+}  
+
+
 
 function limpacampo(){
     document.getElementById("campopesquisar").value="";
+    atualizaLista();
 }
 
 function limparformulario(){
