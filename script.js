@@ -2,7 +2,6 @@
 let lista = document.getElementById("listadd");
 let cadastrar = document.getElementById("cadastrar");
 let excluir = document.getElementsByClassName("excluiritem")
-
 let vector;
 let id;
 
@@ -20,7 +19,7 @@ if (JSON.parse(localStorage.getItem('dados')) != null && JSON.parse(localStorage
 
 cadastrar.addEventListener('click', () => {
 
-    if( document.getElementById("luser2").value!="" && document.getElementById("lemail2").value!=""){
+    if( document.getElementById("luser2").value.trim()!="" && document.getElementById("lemail2").value.trim()!=""){
 
     let email = document.getElementById("lemail2").value;
     let nome = document.getElementById("luser2").value;
@@ -146,6 +145,7 @@ function limparItem(index) {
 }
 
 
+
 function pesquisar() {
 
     if (JSON.parse(localStorage.getItem('dados')) != null) {
@@ -153,10 +153,13 @@ function pesquisar() {
         let dadosRecebidos = JSON.parse(localStorage.getItem('dados'));
         let temp = [];
         let valor = document.getElementById("campopesquisar").value;
+    
        if(valor.trim() != ""){
         for (i = 0; i < dadosRecebidos.length; i++) {
 
-            if (dadosRecebidos[i].nome == valor || dadosRecebidos[i].email == valor ) {
+            
+
+            if (dadosRecebidos[i].nome == valor  || dadosRecebidos[i].email == valor ) {
 
                 temp.push({ id: dadosRecebidos[i].id, nome: dadosRecebidos[i].nome, email: dadosRecebidos[i].email, data: dadosRecebidos[i].data });
 
