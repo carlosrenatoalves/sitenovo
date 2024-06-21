@@ -5,15 +5,21 @@ let excluir = document.getElementsByClassName("excluiritem")
 let vector;
 let id;
 
-if (JSON.parse(localStorage.getItem('dados')) != null && JSON.parse(localStorage.getItem('dados')).length>0) {
+window.addEventListener("load",carregaVariavel);
 
-    id = JSON.parse(localStorage.getItem('dados'))[JSON.parse(localStorage.getItem('dados')).length - 1].id + 1;
-    vector = JSON.parse(localStorage.getItem('dados'));
 
-} else {
+function carregaVariavel(){
 
-    id = 0;
-    vector = [];
+    if (JSON.parse(localStorage.getItem('dados')) != null && JSON.parse(localStorage.getItem('dados')).length>0) {
+
+        id = JSON.parse(localStorage.getItem('dados'))[JSON.parse(localStorage.getItem('dados')).length - 1].id + 1;
+        vector = JSON.parse(localStorage.getItem('dados'));
+    
+    } else {
+    
+        id = 0;
+        vector = [];
+    }
 }
 
 
@@ -130,16 +136,7 @@ function limparItem(index) {
 
     armazena(vector);
 
-    if (JSON.parse(localStorage.getItem('dados')) != null && JSON.parse(localStorage.getItem('dados')).length>0) {
-
-        id = JSON.parse(localStorage.getItem('dados'))[JSON.parse(localStorage.getItem('dados')).length - 1].id + 1;
-        vector = JSON.parse(localStorage.getItem('dados'));
-    
-    } else {
-    
-        id = 0;
-        vector = [];
-    }
+    carregaVariavel();
 
     atualizaLista();
 }
