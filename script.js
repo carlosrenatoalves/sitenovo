@@ -73,9 +73,6 @@ function geralista(elemento) {
     item.appendChild(datatexto)
     lista.appendChild(item);
 
-    document.getElementById("luser2").value = "";
-    document.getElementById("lemail2").value = "";
-
     let span = document.createElement("span");
     let txt = document.createTextNode("excluir");
     span.className = "excluiritem";
