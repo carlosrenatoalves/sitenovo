@@ -73,12 +73,12 @@ function geralista(elemento) {
     item.appendChild(datatexto)
     lista.appendChild(item);
 
-    let exluir = document.createElement("span");
+    let exluirspan = document.createElement("span");
     let excluirtexto = document.createTextNode("excluir");
-    span.className = "excluiritem";
-    span.setAttribute("onclick", "limparItem(" + `${elemento.id}` + ")");
-    span.appendChild(excluirtexto);
-    item.appendChild(exluir);
+    exluirspan.className = "excluiritem";
+    exluirspan.setAttribute("onclick", "limparItem(" + `${elemento.id}` + ")");
+    exluirspan.appendChild(excluirtexto);
+    item.appendChild(exluirspan);
 
 }
 
